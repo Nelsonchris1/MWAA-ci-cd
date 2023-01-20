@@ -8,9 +8,9 @@ with DAG(
    start_date=days_ago(1),
    schedule_interval=None,
 ) as dag:
-    task_a = DummyOperator(task_id="task_a")
-    task_b = DummyOperator(task_id="task_b")
-    task_c = DummyOperator(task_id="task_c")
-    task_d = DummyOperator(task_id="task_d")
+    task_a = DummyOperator(task_id="task_ab")
+    task_b = DummyOperator(task_id="task_bb")
+    task_c = DummyOperator(task_id="task_cb")
+    task_d = DummyOperator(task_id="task_db")
     task_a >> [task_b, task_c]
     task_c >> task_d
